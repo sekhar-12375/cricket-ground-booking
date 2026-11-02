@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { ToastProvider } from './components/ui/Toast';
 import { Navbar } from './components/navbar/Navbar';
@@ -188,6 +189,7 @@ export default function App() {
     <AuthProvider>
       <ToastProvider>
         <RouterShell />
+        <Analytics />
       </ToastProvider>
     </AuthProvider>
   );
